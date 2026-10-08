@@ -1,0 +1,17 @@
+{
+  "product_name": "SmartScribe AI",
+  "tagline": "Free All-in-One AI Content Generator in Bangla & English",
+  "description": "SmartScribe AI is a free automated writing assistant that generates viral social media captions, professional emails, essays, and job cover letters in seconds.",
+  "website_url": "https://smartscribe-ai.onrender.com/",
+  "pricing_model": "Freemium",
+  "categories": ["AI Writing", "Social Media Assistant", "Email Generator", "Resume Builder"],
+  "supported_languages": ["Bangla", "English"],
+  "key_features": [
+    "Viral Social Media Caption Generator",
+    "Professional Email & Letter Writer",
+    "Academic Essay & Assignment Assistant",
+    "Job Cover Letter Builder",
+    "1-Click Text Download",
+    "Real-time Word Counter"
+  ]
+}

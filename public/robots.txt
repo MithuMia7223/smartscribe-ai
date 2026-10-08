@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://smartscribe-ai.onrender.com/sitemap.xml

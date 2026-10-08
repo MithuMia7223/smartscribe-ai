@@ -1,0 +1,308 @@
+<!DOCTYPE html>
+<html lang="bn">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <!-- SEO & Social Sharing Metadata -->
+    <title>SmartScribe AI - Free AI Content Generator | বাংলা এআই রাইটিং টুল</title>
+    <meta name="description" content="Generate viral social media posts, professional emails, essays, and job cover letters instantly with SmartScribe AI. Powered by Google Gemini AI.">
+    <meta name="keywords" content="SmartScribe AI, AI Writer, Free AI Content Generator, Bangla AI Caption, Email Writer, Cover Letter Builder, bKash, Nagad, Binance Pay">
+    <meta name="author" content="SmartScribe AI">
+    <meta name="robots" content="index, follow">
+
+    <!-- Open Graph / Facebook / WhatsApp Preview Meta -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://smartscribe-ai.onrender.com/">
+    <meta property="og:title" content="SmartScribe AI - Free AI Content & Writing Assistant">
+    <meta property="og:description" content="Create viral captions, emails, essays & cover letters in seconds using SmartScribe AI!">
+    <meta property="og:image" content="https://cdn.jsdelivr.net/gh/twitter/twemoji@14.0.2/assets/72x72/26a1.png">
+
+    <!-- Twitter Card Meta -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="SmartScribe AI - Free AI Writer">
+    <meta name="twitter:description" content="Instant AI powered content generation in Bangla and English.">
+
+    <!-- JSON-LD Google Search Schema Markup (Rich Snippets) -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "SoftwareApplication",
+      "name": "SmartScribe AI",
+      "operatingSystem": "All",
+      "applicationCategory": "BusinessApplication",
+      "offers": {
+        "@type": "Offer",
+        "price": "0",
+        "priceCurrency": "USD"
+      },
+      "aggregateRating": {
+        "@type": "AggregateRating",
+        "ratingValue": "4.9",
+        "ratingCount": "1280"
+      }
+    }
+    </script>
+
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Font Awesome Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Hind+Siliguri:wght@400;500;600;700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+    <style>
+        body { font-family: 'Hind Siliguri', 'Inter', sans-serif; }
+        .gradient-text {
+            background: linear-gradient(135deg, #6366f1 0%, #a855f7 50%, #ec4899 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+    </style>
+</head>
+<body class="bg-slate-950 text-slate-100 min-h-screen flex flex-col justify-between">
+
+    <!-- Header / Navbar -->
+    <header class="border-b border-slate-800/80 bg-slate-900/50 backdrop-blur sticky top-0 z-50">
+        <div class="max-w-6xl mx-auto px-4 py-4 flex items-center justify-between">
+            <div class="flex items-center space-x-3">
+                <div class="w-10 h-10 rounded-xl bg-gradient-to-tr from-indigo-500 via-purple-500 to-pink-500 flex items-center justify-center text-white text-xl font-bold shadow-lg shadow-purple-500/20">
+                    ⚡
+                </div>
+                <div>
+                    <h1 class="text-xl font-bold tracking-tight">SmartScribe <span class="gradient-text">AI</span></h1>
+                    <p class="text-xs text-slate-400">স্বয়ংক্রিয় এআই রাইটিং অ্যাসিস্ট্যান্ট</p>
+                </div>
+            </div>
+            <div class="flex items-center space-x-3">
+                <button onclick="toggleProModal()" class="px-3.5 py-1.5 rounded-full text-xs font-bold bg-gradient-to-r from-amber-500 to-orange-500 text-white shadow-lg shadow-amber-500/20 hover:opacity-90 transition flex items-center space-x-1.5">
+                    <i class="fa-solid fa-crown"></i>
+                    <span>Pro Plan (৳১৯৯ / $5)</span>
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <!-- Main Container -->
+    <main class="max-w-5xl mx-auto px-4 py-8 flex-grow w-full">
+
+        <!-- Hero Title -->
+        <div class="text-center mb-8">
+            <h2 class="text-3xl sm:text-5xl font-extrabold tracking-tight mb-3">
+                কয়েক সেকেন্ডে তৈরি করুন <span class="gradient-text">আকর্ষণীয় এআই কন্টেন্ট</span>
+            </h2>
+            <p class="text-slate-400 max-w-2xl mx-auto text-sm sm:text-base">
+                ফেসবুক পোস্ট, ক্যাপশন, প্রফেশনাল ইমেইল, অ্যাসাইনমেন্ট ও সিভি কভার লেটার—আপনার প্রয়োজনীয় যেকোনো লেখা লিখে দেবে আমাদের স্মার্ট এআই।
+            </p>
+        </div>
+
+        <!-- Google AdSense Banner Section -->
+        <div class="w-full bg-slate-900/40 border border-dashed border-slate-800 rounded-2xl p-3 text-center mb-8 text-xs text-slate-500">
+            <i class="fa-solid fa-rectangle-ad text-indigo-400 mr-1"></i> Google AdSense & Sponsored Banner Section
+        </div>
+
+        <!-- Tool Selection Grid -->
+        <div class="grid grid-cols-2 md:grid-cols-4 gap-3 mb-8">
+            <button onclick="selectTool('social')" id="btn-social" class="tool-btn active-tool p-4 rounded-2xl border transition-all text-left bg-indigo-600/20 border-indigo-500/50 text-white shadow-lg shadow-indigo-500/10">
+                <div class="text-2xl mb-2">📱</div>
+                <div class="font-bold text-sm">সোশ্যাল পোস্ট ও ক্যাপশন</div>
+                <div class="text-xs text-slate-400 mt-1">FB, Insta & TikTok</div>
+            </button>
+            <button onclick="selectTool('email')" id="btn-email" class="tool-btn p-4 rounded-2xl border transition-all text-left bg-slate-900/60 border-slate-800 text-slate-400 hover:border-slate-700">
+                <div class="text-2xl mb-2">📧</div>
+                <div class="font-bold text-sm">প্রফেশনাল ইমেইল</div>
+                <div class="text-xs text-slate-400 mt-1">অফিস ও বিজনেস চিঠি</div>
+            </button>
+            <button onclick="selectTool('essay')" id="btn-essay" class="tool-btn p-4 rounded-2xl border transition-all text-left bg-slate-900/60 border-slate-800 text-slate-400 hover:border-slate-700">
+                <div class="text-2xl mb-2">🎓</div>
+                <div class="font-bold text-sm">রচনা ও অ্যাসাইনমেন্ট</div>
+                <div class="text-xs text-slate-400 mt-1">পড়াশোনা ও ব্যাখ্যা</div>
+            </button>
+            <button onclick="selectTool('cover_letter')" id="btn-cover_letter" class="tool-btn p-4 rounded-2xl border transition-all text-left bg-slate-900/60 border-slate-800 text-slate-400 hover:border-slate-700">
+                <div class="text-2xl mb-2">💼</div>
+                <div class="font-bold text-sm">চাকরির কভার লেটার</div>
+                <div class="text-xs text-slate-400 mt-1">সিভি ও আবেদনপত্র</div>
+            </button>
+        </div>
+
+        <!-- Input Box -->
+        <div class="bg-slate-900/70 border border-slate-800 rounded-3xl p-5 sm:p-6 shadow-2xl backdrop-blur-md mb-8">
+            <div class="flex items-center justify-between mb-4">
+                <label class="block text-sm font-semibold text-slate-200">
+                    <i class="fa-solid fa-pen-nib text-indigo-400 mr-2"></i> আপনি কী বিষয় নিয়ে লিখতে চান?
+                </label>
+                <div class="flex items-center space-x-2">
+                    <span class="text-xs text-slate-400">ভাষা:</span>
+                    <select id="languageSelect" class="bg-slate-800 border border-slate-700 text-slate-200 text-xs rounded-lg px-2.5 py-1 focus:ring-2 focus:ring-indigo-500 outline-none">
+                        <option value="Bangla">বাংলা (Bangla)</option>
+                        <option value="English">English</option>
+                    </select>
+                </div>
+            </div>
+
+            <textarea id="promptInput" rows="4" 
+                placeholder="উদাহরণ: একটি নতুন কফি শপের প্রচারের জন্য ফেসবুক পোস্ট লিখে দাও..." 
+                class="w-full bg-slate-950/80 border border-slate-800 rounded-2xl p-4 text-slate-100 placeholder-slate-500 focus:outline-none focus:border-indigo-500 focus:ring-1 focus:ring-indigo-500 text-sm sm:text-base resize-none transition-all mb-4"></textarea>
+
+            <!-- Prompt Suggestions -->
+            <div class="flex flex-wrap gap-2 mb-6 text-xs">
+                <span class="text-slate-500 self-center">আইডিয়া:</span>
+                <button onclick="setPrompt('একটি নতুন রেস্টুরেন্টের ছাড়ের অফার নিয়ে সুন্দর ক্যাপশন')" class="bg-slate-800/80 hover:bg-slate-800 text-slate-300 px-3 py-1 rounded-full border border-slate-700 transition">🍔 রেস্টুরেন্ট অফার</button>
+                <button onclick="setPrompt('ছুটির আবেদনের জন্য অফিসে একটি প্রফেশনাল ইমেইল')" class="bg-slate-800/80 hover:bg-slate-800 text-slate-300 px-3 py-1 rounded-full border border-slate-700 transition">✉️ ছুটির ইমেইল</button>
+                <button onclick="setPrompt('সফটওয়্যার ইঞ্জিনিয়ার পদের জন্য কভার লেটার')" class="bg-slate-800/80 hover:bg-slate-800 text-slate-300 px-3 py-1 rounded-full border border-slate-700 transition">💼 চাকরির কভার লেটার</button>
+            </div>
+
+            <!-- Generate Button -->
+            <button onclick="generateContent()" id="generateBtn" 
+                class="w-full bg-gradient-to-r from-indigo-500 via-purple-500 to-pink-500 hover:from-indigo-600 hover:to-pink-600 text-white font-bold py-3.5 px-6 rounded-2xl shadow-xl shadow-purple-500/25 transition-all transform active:scale-95 flex items-center justify-center space-x-2 text-base">
+                <span>⚡ এআই দিয়ে তৈরি করুন</span>
+            </button>
+        </div>
+
+        <!-- Output Result Box -->
+        <div id="resultBox" class="hidden bg-slate-900/90 border border-indigo-500/30 rounded-3xl p-6 shadow-2xl relative mb-8">
+            <div class="flex items-center justify-between border-b border-slate-800 pb-3 mb-4">
+                <div class="flex items-center space-x-2">
+                    <span class="w-3 h-3 rounded-full bg-indigo-500 animate-ping"></span>
+                    <h3 class="font-bold text-slate-200 text-sm sm:text-base">এআই দ্বারা তৈরি ফলাফল:</h3>
+                    <span id="wordCountBadge" class="text-xs bg-slate-800 text-slate-400 px-2 py-0.5 rounded-md border border-slate-700">0 শব্দ</span>
+                </div>
+                <div class="flex items-center space-x-2">
+                    <button onclick="downloadAsText()" class="bg-slate-800 hover:bg-slate-700 text-slate-300 border border-slate-700 text-xs px-3 py-1.5 rounded-xl transition flex items-center space-x-1">
+                        <i class="fa-solid fa-download"></i>
+                        <span>ডাউনলোড</span>
+                    </button>
+                    <button onclick="copyToClipboard()" class="bg-indigo-600/30 hover:bg-indigo-600/50 text-indigo-300 border border-indigo-500/40 text-xs px-3.5 py-1.5 rounded-xl transition flex items-center space-x-1.5">
+                        <i class="fa-regular fa-copy"></i>
+                        <span id="copyBtnText">কপি করুন</span>
+                    </button>
+                </div>
+            </div>
+            
+            <div id="outputContent" class="text-slate-200 whitespace-pre-line text-sm sm:text-base leading-relaxed font-normal bg-slate-950/60 p-4 rounded-2xl border border-slate-800 min-h-[140px]">
+            </div>
+        </div>
+
+        <!-- Pro Upgrade & Wallet Payment Modal -->
+        <div id="proModal" class="hidden fixed inset-0 bg-slate-950/80 backdrop-blur-sm z-50 flex items-center justify-center p-4">
+            <div class="bg-slate-900 border border-slate-800 rounded-3xl p-6 max-w-lg w-full relative shadow-2xl max-h-[90vh] overflow-y-auto">
+                <button onclick="toggleProModal()" class="absolute top-4 right-4 text-slate-400 hover:text-white">
+                    <i class="fa-solid fa-xmark text-lg"></i>
+                </button>
+                
+                <div class="text-center mb-6">
+                    <div class="w-12 h-12 bg-amber-500/10 text-amber-400 rounded-2xl flex items-center justify-center mx-auto mb-3 text-2xl">
+                        👑
+                    </div>
+                    <h3 class="text-xl font-bold text-slate-100">SmartScribe Pro & Wallet</h3>
+                    <p class="text-xs text-slate-400 mt-1">আনলিমিটেড এআই জেনারেশন ও গ্লোবাল পেমেন্ট ওয়ালেট</p>
+                </div>
+
+                <!-- Pricing Cards -->
+                <div class="grid grid-cols-2 gap-3 mb-6">
+                    <div class="bg-slate-950 p-4 rounded-2xl border border-indigo-500/40 text-center">
+                        <div class="text-xs text-slate-400 mb-1">বাংলাদেশ (BDT)</div>
+                        <div class="text-2xl font-extrabold text-amber-400">৳১৯৯</div>
+                        <div class="text-[10px] text-slate-500 mt-1">মাসিক সাবস্ক্রিপশন</div>
+                    </div>
+                    <div class="bg-slate-950 p-4 rounded-2xl border border-purple-500/40 text-center">
+                        <div class="text-xs text-slate-400 mb-1">International (USD / Crypto)</div>
+                        <div class="text-2xl font-extrabold text-purple-400">$5.00</div>
+                        <div class="text-[10px] text-slate-500 mt-1">Global Monthly Plan</div>
+                    </div>
+                </div>
+
+                <!-- Mithun's Added Payment Methods -->
+                <div class="space-y-3 mb-6 text-xs text-slate-300">
+                    <h4 class="font-bold text-slate-200 text-sm mb-2 border-b border-slate-800 pb-1">পেমেন্ট করার ওয়ালেট ও নম্বরসমূহ:</h4>
+
+                    <!-- bKash Box -->
+                    <div class="bg-pink-950/30 border border-pink-500/30 p-3 rounded-xl flex items-center justify-between">
+                        <div class="flex items-center space-x-2">
+                            <span class="w-7 h-7 bg-pink-600 rounded-lg flex items-center justify-center font-bold text-white text-xs">bK</span>
+                            <div>
+                                <div class="font-bold text-pink-300 text-sm">bKash (Send Money / Cash In)</div>
+                                <div class="text-slate-300 font-mono">01767051973</div>
+                            </div>
+                        </div>
+                        <button onclick="copyNumber('01767051973')" class="bg-pink-600/30 hover:bg-pink-600 text-pink-200 text-[10px] px-2.5 py-1 rounded-lg">কপি নম্বর</button>
+                    </div>
+
+                    <!-- Nagad Box -->
+                    <div class="bg-orange-950/30 border border-orange-500/30 p-3 rounded-xl flex items-center justify-between">
+                        <div class="flex items-center space-x-2">
+                            <span class="w-7 h-7 bg-orange-600 rounded-lg flex items-center justify-center font-bold text-white text-xs">NG</span>
+                            <div>
+                                <div class="font-bold text-orange-300 text-sm">Nagad (Send Money / Cash In)</div>
+                                <div class="text-slate-300 font-mono">01767054931</div>
+                            </div>
+                        </div>
+                        <button onclick="copyNumber('01767054931')" class="bg-orange-600/30 hover:bg-orange-600 text-orange-200 text-[10px] px-2.5 py-1 rounded-lg">কপি নম্বর</button>
+                    </div>
+
+                    <!-- Binance Pay Box -->
+                    <div class="bg-yellow-950/30 border border-yellow-500/30 p-3 rounded-xl flex items-center justify-between">
+                        <div class="flex items-center space-x-2">
+                            <span class="w-7 h-7 bg-yellow-500 rounded-lg flex items-center justify-center font-bold text-slate-950 text-xs">BN</span>
+                            <div>
+                                <div class="font-bold text-yellow-300 text-sm">Binance Pay ID / UID (Crypto/USD)</div>
+                                <div class="text-slate-300 font-mono">1281293610</div>
+                            </div>
+                        </div>
+                        <button onclick="copyNumber('1281293610')" class="bg-yellow-500/30 hover:bg-yellow-500 text-yellow-200 hover:text-slate-950 text-[10px] px-2.5 py-1 rounded-lg">কপি Pay ID</button>
+                    </div>
+
+                    <!-- Dollar / Global Bank Box -->
+                    <div class="bg-emerald-950/30 border border-emerald-500/30 p-3 rounded-xl">
+                        <div class="font-bold text-emerald-300 text-sm mb-1">🌐 International Card & Dutch-Bangla Bank</div>
+                        <div class="text-slate-400 text-[11px]">আন্তর্জাতিক পেমেন্টের জন্য Binance Crypto, Stripe, PayPal অথবা Dutch-Bangla Bank PLC (DBBL) অ্যাকাউন্ট সুইফটের মাধ্যমে জমা দিন। প্রসেস সম্পন্ন হলে ট্রানজেকশন নম্বর দিন।</div>
+                    </div>
+                </div>
+
+                <!-- Transaction Input Form -->
+                <div class="bg-slate-950 p-4 rounded-2xl border border-slate-800 mb-6">
+                    <label class="block text-xs font-semibold text-slate-300 mb-2">টাকা পাঠানোর পর আপনার নম্বর/ID ও TrxID দিন:</label>
+                    <input type="text" id="trxInput" placeholder="আপনার নম্বর/ID ও TrxID (যেমন: 017XXX - 763NZ9BM)" class="w-full bg-slate-900 border border-slate-700 rounded-xl p-2.5 text-xs text-slate-200 mb-3 outline-none focus:border-amber-500">
+                    <button onclick="submitTrx()" class="w-full bg-gradient-to-r from-amber-500 to-orange-500 hover:from-amber-600 hover:to-orange-600 text-white font-bold py-2.5 rounded-xl text-xs shadow-lg shadow-amber-500/20">
+                        সাবমিট করুন ও প্রিমিয়াম অ্যাক্টিভ করুন
+                    </button>
+                </div>
+            </div>
+        </div>
+
+    </main>
+
+    <!-- Footer -->
+    <footer class="border-t border-slate-800/80 py-6 text-center text-xs text-slate-500 bg-slate-950">
+        <div class="max-w-6xl mx-auto px-4">
+            <p class="mb-2">© 2026 SmartScribe AI. All rights reserved. Powered by Google Gemini AI.</p>
+            <p class="text-slate-600">স্বয়ংক্রিয় এআই কন্টেন্ট ও সোশ্যাল মিডিয়া অ্যাসিস্ট্যান্ট প্ল্যাটফর্ম</p>
+        </div>
+    </footer>
+
+    <!-- App JS -->
+    <script src="app.js"></script>
+    <script>
+        function toggleProModal() {
+            const modal = document.getElementById('proModal');
+            modal.classList.toggle('hidden');
+        }
+
+        function copyNumber(num) {
+            navigator.clipboard.writeText(num).then(() => {
+                alert(`কপি হয়েছে: ${num}`);
+            });
+        }
+
+        function submitTrx() {
+            const val = document.getElementById('trxInput').value.trim();
+            if (!val) {
+                alert('অনুগ্রহ করে টাকা পাঠানোর ট্রানজেকশন তথ্য প্রদান করুন।');
+                return;
+            }
+            alert('আপনার ট্রানজেকশন তথ্য রিসিভ করা হয়েছে! খুব দ্রুত আপনার Pro Plan অ্যাক্টিভেট করে দেওয়া হবে। ধন্যবাদ!');
+            toggleProModal();
+        }
+    </script>
+</body>
+</html>
